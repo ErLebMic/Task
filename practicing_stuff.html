@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Tapsirma</title>
 
         <style>
 
-            @media (max-width: 900px) {
-                .grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-
-            @media (max-width: 600px) {
-                .grid {
-                    grid-template-columns: 1fr;
-                }
-            }
+           
             .grid {
                 display:grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -72,7 +64,30 @@
 
             .button-buy:hover {
                 background-color: color-mix(in srgb, #c0c0c0 80%, black);
+
+            
             }
+
+             @media (max-width: 900px) {
+                .grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .button-shop {
+                    margin-right: 20px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .button-shop {
+                    margin-right: 20px;
+                }
+            }
+
         </style>
     </head>
 
@@ -160,135 +175,3 @@
 
 </html>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapsirma</title>
-
-    <style>
-        body {
-            color: black;
-            background-color: black;
-            margin-bottom: 70px;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-        }
-
-        .shop {
-            display: flex;
-            justify-content: flex-end;
-            padding: 10px;
-        }
-
-        .button-shop {
-            background-color: gray;
-            border-radius: 20px;
-            padding: 20px;
-            color: black;
-            font-weight: bold;
-        }
-
-        .button-buy {
-            background-color: gray;
-            border-radius: 20px;
-            color: black;
-            font-weight: bold;
-            padding: 20px;
-        }
-
-        .button-buy:hover,
-        .button-shop:hover {
-            background-color: #a0a0a0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .product {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 10px solid #c0c0c0;
-            border-radius: 20px;
-            background-color: gray;
-            padding: 20px;
-        }
-
-        /* FIXED IMAGE */
-        img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 20px;
-        }
-
-        /* RESPONSIVE GRID */
-        @media (max-width: 900px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<h1>Shop</h1>
-
-<div class="shop">
-    <button class="button-shop">Shopping cart</button>
-</div>
-
-<div class="grid">
-
-    <div class="product">
-        <img src="guitar2.png">
-        <p><b>Электрогитара для настоящего звука и стиля.</b></p>
-        <p>Идеально подходит для всех уровней.</p>
-        <p style="font-size: 30px;"><b>$4.99</b></p>
-        <button class="button-buy" onclick="alerter()">Buy</button>
-    </div>
-
-    <div class="product">
-        <img src="guitar2.png">
-        <p><b>Электрогитара для настоящего звука и стиля.</b></p>
-        <p>Идеально подходит для всех уровней.</p>
-        <p style="font-size: 30px;"><b>$4.99</b></p>
-        <button class="button-buy" onclick="alerter()">Buy</button>
-    </div>
-
-    <div class="product">
-        <img src="guitar2.png">
-        <p><b>Электрогитара для настоящего звука и стиля.</b></p>
-        <p>Идеально подходит для всех уровней.</p>
-        <p style="font-size: 30px;"><b>$4.99</b></p>
-        <button class="button-buy" onclick="alerter()">Buy</button>
-    </div>
-
-</div>
-
-<script>
-function alerter() {
-    alert("Корзинаға қосылды!");
-}
-</script>
-
-</body>
-</html>
